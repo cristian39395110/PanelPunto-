@@ -1,0 +1,197 @@
+/***********************************
+  CONTENEDOR GENERAL
+***********************************/
+.vend-container {
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/***********************************
+  HEADER
+***********************************/
+.vend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.vend-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.vend-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.vend-logout {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/***********************************
+  ESTADO DE CARGA
+***********************************/
+.vend-cargando,
+.vend-empty {
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 2rem;
+}
+
+/***********************************
+  RESUMEN (3 MÉTRICAS)
+***********************************/
+.vend-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  /* 👉 separación entre cajas */
+  margin-bottom: 1.5rem;
+}
+
+.vend-resumen-item {
+  padding: 1rem 0.8rem;      /* 👉 agranda la tarjeta */
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.vend-resumen-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;    /* 👉 separa texto de número */
+  display: block;
+}
+
+.vend-resumen-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.vend-resumen-ok {
+  color: #00c853;
+}
+
+.vend-resumen-pendiente {
+  color: #ff5252;
+}
+
+/***********************************
+  LISTA DE TARJETAS
+***********************************/
+.vend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/***********************************
+  TARJETAS DE VENTA
+***********************************/
+.vend-card {
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #ffffff20;
+  background: var(--card-bg, #ffffff08);
+  backdrop-filter: blur(6px);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.vend-card--pagado {
+  border-left: 6px solid #00c853;
+}
+
+.vend-card--nopagado {
+  border-left: 6px solid #ff5252;
+}
+
+/***********************************
+  HEADER DE TARJETA
+***********************************/
+.vend-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vend-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/***********************************
+  BADGE (#VENTA)
+***********************************/
+.vend-card-badge {
+  background: #1976d2;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/***********************************
+  LINEAS CON INFORMACIÓN
+***********************************/
+.vend-card-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/***********************************
+  ESTADO FINAL
+***********************************/
+.vend-card-status {
+  margin-top: 0.6rem;
+  font-weight: bold;
+}
+
+.vend-card-status {
+  opacity: 0.9;
+}
+
+/***********************************
+  BOTÓN FLOTANTE
+***********************************/
+.vend-btn-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/***********************************
+  RESPONSIVE
+***********************************/
+@media (max-width: 500px) {
+  .vend-resumen {
+    flex-direction: column;
+  }
+
+  .vend-resumen-item {
+    width: 100%;
+  }
+
+  .vend-card {
+    font-size: 0.9rem;
+  }
+}

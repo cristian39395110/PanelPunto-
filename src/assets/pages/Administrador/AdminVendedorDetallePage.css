@@ -1,0 +1,332 @@
+/* ================================
+   CONTENEDOR GENERAL
+================================ */
+.sv-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--text-color, #fff);
+  background: var(--bg-color, #121212);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ================================
+   HEADER
+================================ */
+.sv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.sv-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sv-subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+/* BOTÓN DE CERRAR SESIÓN */
+.sv-logout {
+  background: #d7263d;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.sv-logout:hover {
+  background: #b11f32;
+}
+
+/* BOTÓN LINK (volver atrás) */
+.sv-btn-link {
+  color: #4ea1ff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.sv-btn-link:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   FILTROS
+================================ */
+.sv-filters {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.sv-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.sv-field label {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.sv-field input,
+.sv-field textarea {
+  background: #2a2a2a;
+  border: 1px solid #3c3c3c;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.sv-dates-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* BOTONES GENERALES */
+.sv-btn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sv-btn-primary {
+  background: #4ea1ff;
+  color: #fff;
+}
+.sv-btn-primary:hover {
+  background: #368de6;
+}
+
+/* ================================
+   RESUMEN GLOBAL
+================================ */
+.sv-resumen-global h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.sv-resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.sv-resumen-card {
+  background: #1d1d1d;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #2c2c2c;
+}
+
+.sv-resumen-label {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.sv-resumen-card strong {
+  font-size: 20px;
+  display: block;
+  margin-top: 8px;
+}
+
+.sv-resumen-card.pendiente strong {
+  color: #fbc531;
+}
+
+/* ================================
+   LISTA DE VENDEDORES (CARDS)
+================================ */
+.sv-list {
+  margin-top: 20px;
+}
+
+.sv-card {
+  background: #1b1b1b;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 18px;
+}
+
+.sv-card-header h3 {
+  margin: 0;
+}
+
+.sv-email {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.sv-localidad {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ddd;
+}
+
+.sv-card-body {
+  margin-top: 12px;
+}
+
+.sv-card-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+/* FOOTER DEL CARD */
+.sv-card-footer {
+  margin-top: 12px;
+  text-align: right;
+}
+
+/* ================================
+   ESTADOS
+================================ */
+.sv-loading,
+.sv-empty,
+.sv-error {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.sv-error {
+  color: #ff6b6b;
+}
+
+/* COLOR PENDIENTE */
+.sv-pendiente {
+  color: #ffda79;
+}
+.sv-pendiente-cero {
+  color: #2ecc71;
+}
+
+/* ================================
+   TABLA DETALLE (ventas)
+================================ */
+.sv-table-wrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.sv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.sv-table thead {
+  background: #222;
+}
+
+.sv-table th,
+.sv-table td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  white-space: nowrap;
+}
+
+.sv-table th {
+  color: #bbb;
+  text-align: left;
+}
+
+/* BADGES */
+.sv-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.sv-badge-ok {
+  background: #2ecc71;
+  color: #111;
+}
+
+.sv-badge-pend {
+  background: #fbc531;
+  color: #111;
+}
+
+/* ================================
+   DETALLE DE PAGOS
+================================ */
+.sv-detalle-pagos {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sv-detalle-pagos-form,
+.sv-detalle-pagos-historial {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #2d2d2d;
+}
+
+.sv-pagos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sv-pago-item {
+  background: #252525;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #4ea1ff;
+}
+
+.sv-pago-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sv-pago-observacion {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .sv-dates-row {
+    flex-direction: column;
+  }
+
+  .sv-detalle-pagos {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

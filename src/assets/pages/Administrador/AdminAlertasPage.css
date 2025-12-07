@@ -1,0 +1,277 @@
+/* ============================
+   CONTENEDOR GENERAL
+=============================== */
+.sv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #222;
+  font-family: "Inter", sans-serif;
+}
+
+.sv-loading,
+.sv-error,
+.sv-empty {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.sv-error {
+  color: #e84118;
+}
+
+/* ============================
+   HEADER
+=============================== */
+.sv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.sv-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sv-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.sv-btn-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: #3498db;
+  cursor: pointer;
+}
+
+.sv-btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Logout */
+.sv-logout {
+  background: #e84118;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.sv-logout:hover {
+  background: #c23616;
+}
+
+/* ============================
+   FILTROS
+=============================== */
+.sv-filters {
+  margin-bottom: 20px;
+  padding: 14px;
+  background: #f4f6f7;
+  border-radius: 10px;
+}
+
+.sv-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.sv-filter-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.sv-filter-label {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.sv-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ============================
+   BOTONES
+=============================== */
+.sv-btn {
+  padding: 8px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sv-btn-primary {
+  background: #0984e3;
+  color: #fff;
+}
+
+.sv-btn-primary:hover {
+  background: #0773c9;
+}
+
+/* ============================
+   LISTA DE ALERTAS
+=============================== */
+.sv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CARD */
+.sv-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 6%);
+}
+
+.sv-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sv-card-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 17px;
+}
+
+.sv-email,
+.sv-localidad {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Badge */
+.sv-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.sv-badge-pend {
+  background: #fbc531;
+  color: #222;
+}
+
+.sv-badge-ok {
+  background: #2ecc71;
+}
+
+/* Body */
+.sv-card-body {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Observación */
+.sv-observacion {
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 4px solid #0984e3;
+  background: #eef6ff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Footer */
+.sv-card-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 480px) {
+  .sv-container {
+    padding: 10px;
+  }
+
+  .sv-card {
+    padding: 12px;
+  }
+
+  .sv-card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sv-logout {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ============================
+   DARK MODE AUTOMÁTICO
+=============================== */
+@media (prefers-color-scheme: dark) {
+  .sv-container {
+    color: #f1f1f1;
+  }
+
+  .sv-header h2 {
+    color: #fff;
+  }
+
+  .sv-subtitle {
+    color: #ccc;
+  }
+
+  .sv-filters {
+    background: #1e1e1e;
+    border: 1px solid #333;
+  }
+
+  .sv-input {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+  }
+
+  .sv-card {
+    background: #1f1f1f;
+    border: 1px solid #333;
+  }
+
+  .sv-observacion {
+    background: #0f2a45;
+    border-left-color: #4aa3ff;
+  }
+
+  .sv-badge-pend {
+    background: #fbc531;
+    color: #000;
+  }
+
+  .sv-badge-ok {
+    background: #2ecc71;
+    color: #fff;
+  }
+
+  .sv-btn-primary {
+    background: #3498db;
+  }
+}
+    

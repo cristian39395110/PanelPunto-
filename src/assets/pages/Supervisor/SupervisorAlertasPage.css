@@ -1,0 +1,270 @@
+/* ===========================
+   CONTENEDOR GENERAL
+   =========================== */
+.sup-alertas-page {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #f0f0f0;
+}
+
+.sup-alertas-header h2 {
+  font-size: 26px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.sup-alertas-header p {
+  margin-top: 4px;
+  font-size: 15px;
+  color: #cfcfcf;
+}
+
+/* ===========================
+   FILTROS
+   =========================== */
+.sup-alertas-filtros {
+  margin-top: 20px;
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.sup-alertas-filtros-form {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sup-filtro-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+
+.sup-filtro-item label {
+  font-size: 13px;
+  color: #c4c4c4;
+  margin-bottom: 5px;
+}
+
+.sup-filtro-item select,
+.sup-filtro-item input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #121212;
+  color: #fff;
+  font-size: 14px;
+}
+
+.sup-filtro-item input::placeholder {
+  color: #999;
+}
+
+.sup-filtro-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #2979ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.sup-filtro-btn:hover {
+  background: #1c5fcc;
+}
+
+/* ===========================
+   LISTA DE ALERTAS
+   =========================== */
+.sup-alertas-lista {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ===========================
+   TARJETA DE ALERTA
+   =========================== */
+.sup-alerta-card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #333;
+  position: relative;
+  transition: transform 0.1s ease;
+}
+
+.sup-alerta-card:hover {
+  transform: scale(1.01);
+}
+
+.sup-alerta-pendiente {
+  border-left: 5px solid #ff5252;
+}
+
+.sup-alerta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sup-alerta-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.sup-alerta-fecha {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 4px;
+}
+
+.sup-alerta-estado {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.sup-alerta-estado-pendiente {
+  background: #ff5252;
+  color: white;
+}
+
+.sup-alerta-estado-resuelta {
+  background: #4caf50;
+  color: white;
+}
+
+.sup-alerta-mensaje {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #dddddd;
+  line-height: 1.4;
+}
+
+/* ===========================
+   INFO DEL VENDEDOR
+   =========================== */
+.sup-alerta-vendedor {
+  margin-top: 15px;
+  padding: 10px;
+  background: #202020;
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 3px solid #555;
+}
+
+.sup-alerta-vendedor p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* ===========================
+   ACCIONES
+   =========================== */
+.sup-alerta-acciones {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botón primario (desbloquear) */
+.sup-btn-primario {
+  background: #00c853;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sup-btn-primario:hover {
+  background: #009f42;
+}
+
+/* Botón secundario (marcar resuelta) */
+.sup-btn-secundario {
+  background: #424242;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sup-btn-secundario:hover {
+  background: #505050;
+}
+
+/* Botón link (detalle vendedor) */
+.sup-btn-link {
+  background: transparent;
+  border: none;
+  color: #64b5f6;
+  cursor: pointer;
+  padding: 6px;
+  text-decoration: underline;
+}
+
+.sup-btn-link:hover {
+  color: #82caff;
+}
+
+/* ===========================
+   ERRORES / VACÍO / CARGANDO
+   =========================== */
+.sup-alertas-error {
+  color: #ff8a80;
+  background: #3b0000;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #a30000;
+  margin-top: 20px;
+}
+
+.sup-alertas-loading,
+.sup-alertas-empty {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 15px;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+   =========================== */
+@media (max-width: 600px) {
+  .sup-alertas-page {
+    padding: 12px;
+  }
+
+  .sup-alertas-filtros {
+    padding: 12px;
+  }
+
+  .sup-alertas-header h2 {
+    font-size: 22px;
+  }
+
+  .sup-alerta-card {
+    padding: 14px;
+  }
+
+  .sup-filtro-item {
+    min-width: 100%;
+  }
+
+  .sup-alertas-filtros-form {
+    gap: 12px;
+  }
+}

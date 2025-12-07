@@ -1,0 +1,488 @@
+/* ============================
+   CONTENEDOR GENERAL
+   ============================ */
+
+.sv-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f5f5f5;
+  background: #0f172a; /* azul oscuro tipo dashboard */
+  min-height: 100vh;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+
+.sv-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sv-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.sv-subtitle {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.sv-header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ============================
+   BOTONES
+   ============================ */
+
+.sv-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.sv-btn-primary {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+}
+
+.sv-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(22, 163, 74, 0.45);
+}
+
+.sv-btn-secondary {
+  background: rgba(148, 163, 184, 0.2);
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.sv-btn-secondary:hover {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.sv-btn-ghost {
+  background: transparent;
+  color: #cbd5f5;
+  border: 1px dashed rgba(148, 163, 184, 0.5);
+}
+
+.sv-btn-ghost:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.sv-logout {
+  background: #ef4444;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 14px rgba(239, 68, 68, 0.45);
+}
+
+.sv-logout:hover {
+  background: #dc2626;
+}
+
+/* ============================
+   FILTROS LISTA VENDEDORES
+   ============================ */
+
+.sv-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.sv-field {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sv-field label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.sv-field input,
+.sv-field select {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+.sv-field input::placeholder {
+  color: #64748b;
+}
+
+.sv-dates-row {
+  display: flex;
+  gap: 12px;
+  flex: 1 1 220px;
+}
+
+/* ============================
+   RESUMEN GLOBAL
+   ============================ */
+
+.sv-resumen-global {
+  margin-bottom: 18px;
+}
+
+.sv-resumen-global h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.sv-resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.sv-resumen-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 14px;
+  padding: 10px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sv-resumen-card.pendiente {
+  border-color: rgba(239, 68, 68, 0.6);
+  background: linear-gradient(
+    135deg,
+    rgba(127, 29, 29, 0.8),
+    rgba(30, 64, 175, 0.85)
+  );
+}
+
+.sv-resumen-label {
+  font-size: 0.75rem;
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sv-resumen-card strong {
+  font-size: 1.05rem;
+}
+
+/* ============================
+   ESTADOS GENERALES
+   ============================ */
+
+.sv-loading,
+.sv-empty {
+  margin-top: 20px;
+  text-align: center;
+  color: #cbd5f5;
+}
+
+/* ============================
+   LISTA DE VENDEDORES / VENTAS
+   ============================ */
+
+.sv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sv-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.6);
+}
+
+.sv-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sv-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.sv-email {
+  font-size: 0.85rem;
+  color: #93c5fd;
+}
+
+.sv-localidad {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.sv-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.sv-card-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.sv-card-row span:first-child {
+  color: #9ca3af;
+}
+
+.sv-pendiente {
+  color: #fee2e2;
+}
+
+.sv-pendiente-cero {
+  color: #bbf7d0;
+}
+
+.sv-card-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============================
+   DETALLE VENDEDOR
+   ============================ */
+
+.sv-detalle-actions {
+  margin: 16px 0 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sv-detalle-actions-left,
+.sv-detalle-actions-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.sv-detalle-actions-right p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* LISTA DETALLE VENTAS */
+
+.sv-list-detalle {
+  margin-top: 8px;
+}
+
+/* Reutilizamos .sv-card pero agregamos variantes */
+.sv-card-venta {
+  position: relative;
+}
+
+.sv-card-pagada {
+  border-color: rgba(34, 197, 94, 0.7);
+  background: linear-gradient(
+    135deg,
+    rgba(6, 95, 70, 0.85),
+    rgba(15, 23, 42, 0.95)
+  );
+}
+
+.sv-card-pendiente {
+  border-color: rgba(234, 179, 8, 0.8);
+  background: linear-gradient(
+    135deg,
+    rgba(120, 53, 15, 0.85),
+    rgba(15, 23, 42, 0.95)
+  );
+}
+
+.sv-card-header-venta {
+  align-items: center;
+}
+
+.sv-fecha {
+  font-size: 0.82rem;
+  color: #e5e7eb;
+}
+
+/* Checkbox para incluir en pago */
+
+.sv-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sv-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.sv-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #22c55e;
+}
+
+/* Badge "Pagada" */
+
+.sv-badge-pagado {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(34, 197, 94, 0.15);
+  color: #bbf7d0;
+  border: 1px solid rgba(34, 197, 94, 0.7);
+}
+
+/* HISTORIAL PAGOS */
+
+.sv-historial-pagos {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.sv-historial-pagos h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.sv-historial-pagos ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sv-historial-pagos li {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  padding: 4px 0;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+.sv-historial-pagos li:last-child {
+  border-bottom: none;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+@media (max-width: 768px) {
+  .sv-container {
+    padding: 12px;
+  }
+
+  .sv-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sv-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .sv-filters {
+    flex-direction: column;
+  }
+
+  .sv-dates-row {
+    flex-direction: column;
+  }
+
+  .sv-card {
+    padding: 10px 11px;
+  }
+
+  .sv-detalle-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sv-detalle-actions-right {
+    align-items: flex-start;
+  }
+}
+.sv-cant-pagar-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.sv-cant-label {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+}
+
+.sv-cant-input {
+  width: 80px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.85rem;
+}
+

@@ -1,0 +1,68 @@
+.sup-container {
+  padding: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.sup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sup-logout {
+  padding: 8px 12px;
+  background: #f33;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.sup-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.sup-filtros input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.sup-date-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.sup-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sup-ok {
+  color: green;
+  font-weight: bold;
+}
+
+.sup-bad {
+  color: red;
+  font-weight: bold;
+}
+
+.sup-report-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ff9500;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+}

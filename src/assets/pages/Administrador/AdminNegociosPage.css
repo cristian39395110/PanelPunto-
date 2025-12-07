@@ -1,0 +1,436 @@
+.neg-page {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #f5f5f5;
+}
+
+/* Soporta claro/oscuro: usa colores neutros */
+@media (prefers-color-scheme: light) {
+  .neg-page {
+    color: #222;
+  }
+}
+
+.neg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.neg-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.neg-header-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.neg-btn {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.neg-btn.primary {
+  background: linear-gradient(135deg, #ff7f50, #ff4f81);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.neg-btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-btn.ghost {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.neg-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  opacity: 0.95;
+}
+
+/* FILTROS */
+.neg-filters {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-filters {
+    background: #fafafa;
+  }
+}
+
+.neg-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.neg-filter-item {
+  min-width: 140px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.neg-filter-item label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.neg-filter-item input,
+.neg-filter-item select {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 10, 10, 0.9);
+  color: inherit;
+  font-size: 0.85rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-filter-item input,
+  .neg-filter-item select {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+.neg-filter-item input:focus,
+.neg-filter-item select:focus {
+  outline: none;
+  border-color: #ff7f50;
+}
+
+/* ESTADOS */
+.neg-loading,
+.neg-error,
+.neg-empty {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.neg-error {
+  color: #ff6b6b;
+}
+
+/* LAYOUT PRINCIPAL: tabla + side */
+.neg-layout-main {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.2fr);
+  gap: 16px;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .neg-layout-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TABLA */
+.neg-table-section {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 16px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-table-section {
+    background: #ffffff;
+  }
+}
+
+.neg-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.neg-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.neg-table thead {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-table thead {
+    background: #f2f2f2;
+  }
+}
+
+.neg-table th,
+.neg-table td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-table th,
+  .neg-table td {
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.neg-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.neg-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.neg-negocio-nombre {
+  font-weight: 600;
+}
+
+.neg-negocio-fecha {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.neg-col-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.neg-sub-muted {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.neg-sub-muted.small {
+  font-size: 0.7rem;
+}
+
+/* Chips, badges */
+.neg-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.neg-chip.small {
+  margin-top: 2px;
+}
+
+.neg-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+
+.neg-badge.ok {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+}
+
+.neg-badge.warn {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+}
+
+.neg-badge.bad {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+.neg-badge.neutral {
+  background: rgba(127, 140, 141, 0.15);
+  color: #bdc3c7;
+}
+
+.neg-link-wsp {
+  font-size: 0.75rem;
+  color: #25d366;
+  text-decoration: none;
+}
+
+.neg-link-wsp:hover {
+  text-decoration: underline;
+}
+
+/* SIDE PANEL */
+.neg-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.neg-card {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 16px;
+  padding: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-card {
+    background: #ffffff;
+  }
+}
+
+.neg-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.neg-ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.neg-ranking-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.8rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .neg-ranking-item {
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.neg-ranking-item.small {
+  font-size: 0.78rem;
+}
+
+.neg-ranking-position {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.neg-ranking-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.neg-ranking-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+/* Mobile ajustes */
+@media (max-width: 600px) {
+  .neg-header {
+    flex-direction: column;
+  }
+
+  .neg-table th:nth-child(3),
+  .neg-table td:nth-child(3),
+  .neg-table th:nth-child(6),
+  .neg-table td:nth-child(6) {
+    display: none; /* se ocultan algunas columnas en pantallas muy chicas */
+  }
+}
+/* 🔥 Mapa de calor por provincia */
+.neg-heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.neg-heatmap-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.neg-heatmap-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.neg-heatmap-count {
+  opacity: 0.7;
+}
+
+.neg-heatmap-bar-wrapper {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.neg-heatmap-bar {
+  height: 8px;
+  border-radius: 999px;
+  /* degradado tipo calor: de naranja suave a rojo intenso */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 184, 108, 0.9),
+    rgba(255, 94, 94, 1)
+  );
+  transition: width 0.3s ease-out;
+}
+
+/* En pantallas chicas que no se vea apretado */
+@media (max-width: 768px) {
+  .neg-heatmap-label {
+    font-size: 0.8rem;
+  }
+
+  .neg-heatmap-bar {
+    height: 6px;
+  }
+}

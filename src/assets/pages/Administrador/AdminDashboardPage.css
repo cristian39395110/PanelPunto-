@@ -1,0 +1,71 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-dashboard-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.admin-dashboard-status {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.admin-dashboard-error {
+  font-size: 0.9rem;
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(248, 113, 113, 0.6);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* GRID DE CARDS */
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.admin-card {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.6);
+}
+
+.admin-card.primary {
+  border-color: rgba(249, 115, 22, 0.7);
+  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.3);
+}
+
+.admin-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9ca3af;
+}
+
+.admin-card-main {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.admin-card-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.admin-card-sub span {
+  color: #fbbf24;
+}

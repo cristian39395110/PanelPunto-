@@ -1,0 +1,699 @@
+/* ===========================
+   LAYOUT GENERAL
+   =========================== */
+
+.admin-retos {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+}
+
+.admin-retos-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+/* ===========================
+   FILTROS SUPERIORES
+   =========================== */
+
+.admin-retos-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.filtro-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #4b5563;
+}
+
+.filtro-group select {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filtro-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+}
+
+/* Botones filtros */
+
+.admin-retos-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+/* ===========================
+   BOTONES GENERALES
+   =========================== */
+
+.btn,
+.admin-retos-actions button,
+.admin-modal-buttons .btn {
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e5e7eb;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn.small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.btn.primary,
+.admin-retos-actions .primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.btn.warning {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn:hover,
+.admin-retos-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
+}
+
+.btn:active,
+.admin-retos-actions button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:disabled,
+.admin-retos-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* ===========================
+   MENSAJES / STATUS
+   =========================== */
+
+.admin-retos-status {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.admin-retos-error {
+  font-size: 0.9rem;
+  color: #b91c1c;
+  background: #fef2f2;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.admin-retos-ok {
+  font-size: 0.9rem;
+  color: #166534;
+  background: #ecfdf3;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ===========================
+   LISTA DE RETOS
+   =========================== */
+
+.admin-retos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Tarjeta reto */
+
+.reto-card-admin {
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.reto-card-admin.active {
+  border-color: #22c55e;
+}
+
+.reto-card-admin.inactive {
+  opacity: 0.9;
+}
+
+.reto-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.reto-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.reto-sub {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Badge estado */
+
+.badge {
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-off {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Descripción y meta */
+
+.reto-desc {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.reto-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Pills */
+
+.pill {
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pill-light {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.pill-outline {
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  background: #f9fafb;
+}
+
+.pill-mini {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* Footer de acciones en tarjeta */
+
+.reto-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+/* ===========================
+   PROGRESO DEL RETO
+   =========================== */
+
+.admin-retos-progreso {
+  margin-top: 1.75rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.progreso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.progreso-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+/* Tabla */
+
+.progreso-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.progreso-table th,
+.progreso-table td {
+  padding: 0.45rem 0.5rem;
+  text-align: left;
+}
+
+.progreso-table thead {
+  background: #e5e7eb;
+}
+
+.progreso-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* ===========================
+   MODAL CREAR RETO
+   =========================== */
+
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* 👇 clave para que en celu tenga scroll interno */
+.admin-modal {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.3);
+}
+
+/* barra de scroll más prolija en el modal */
+.admin-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.admin-modal::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 999px;
+}
+
+.admin-modal h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Plantillas */
+
+.plantillas-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.pill-btn {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.pill-btn.active {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Campos del formulario */
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.field-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #4b5563;
+}
+
+.field-group input,
+.field-group textarea,
+.field-group select {
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-group input:focus,
+.field-group textarea:focus,
+.field-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+.field-group textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+/* Campos en línea */
+
+.field-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.field-inline .field-group {
+  flex: 1 1 150px;
+}
+
+/* Botones del modal */
+
+.admin-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+  .admin-retos {
+    padding: 1rem 0.75rem 1.25rem;
+  }
+
+  .admin-retos-filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-retos-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .admin-retos-actions button {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .reto-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-retos-progreso {
+    padding: 0.75rem;
+  }
+
+  .admin-modal-overlay {
+    align-items: flex-start;
+    padding-top: 0.75rem;
+  }
+
+  .admin-modal {
+    border-radius: 0.8rem;
+    max-height: 92vh; /* un pelín más alto en celu */
+  }
+
+  .field-inline {
+    flex-direction: column;
+  }
+
+  .admin-modal-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .admin-modal-buttons .btn,
+  .admin-modal-buttons .btn.primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-retos-title {
+    font-size: 1.3rem;
+  }
+
+  .reto-card-admin {
+    padding: 0.8rem 0.85rem;
+  }
+}
+/* ===========================
+   FIX GENERAL: inputs dentro del modal
+   =========================== */
+
+.admin-modal {
+  box-sizing: border-box;
+}
+
+.admin-modal .field-group input,
+.admin-modal .field-group textarea,
+.admin-modal .field-group select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Evitar que nada dentro del modal se haga más ancho que el modal */
+.admin-modal * {
+  max-width: 100%;
+}
+
+/* ===========================
+   MODO OSCURO (cuando el navegador/OS está en dark)
+   =========================== */
+
+@media (prefers-color-scheme: dark) {
+  .admin-retos {
+    background: #020617; /* casi negro */
+    color: #e5e7eb;
+  }
+
+  .admin-retos-title {
+    color: #f9fafb;
+  }
+
+  .admin-retos-filtros {
+    background: #020617;
+    border-color: #1f2937;
+  }
+
+  .filtro-group label {
+    color: #9ca3af;
+  }
+
+  .filtro-group select {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #4b5563;
+  }
+
+  .admin-retos-status {
+    color: #e5e7eb;
+  }
+
+  .admin-retos-error {
+    background: #451a1a;
+    color: #fecaca;
+    border-color: #7f1d1d;
+  }
+
+  .admin-retos-ok {
+    background: #052e16;
+    color: #bbf7d0;
+    border-color: #166534;
+  }
+
+  .reto-card-admin {
+    background: #020617;
+    border-color: #1f2937;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+  }
+
+  .reto-desc {
+    color: #e5e7eb;
+  }
+
+  .reto-sub {
+    color: #9ca3af;
+  }
+
+  .pill-light {
+    background: #111827;
+    color: #e5e7eb;
+  }
+
+  .pill-outline {
+    background: #020617;
+    border-color: #374151;
+    color: #e5e7eb;
+  }
+
+  .pill-mini {
+    background: #1d4ed8;
+    color: #dbeafe;
+  }
+
+  .admin-retos-progreso {
+    background: #020617;
+    border-color: #1f2937;
+  }
+
+  .progreso-table thead {
+    background: #111827;
+  }
+
+  .progreso-table tbody tr:nth-child(even) {
+    background: #020617;
+  }
+
+  /* Overlay y modal en oscuro */
+  .admin-modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .admin-modal {
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1f2937;
+  }
+
+  .admin-modal h3 {
+    color: #f9fafb;
+  }
+
+  .field-group label {
+    color: #9ca3af;
+  }
+
+  .field-group input,
+  .field-group textarea,
+  .field-group select {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #4b5563;
+  }
+
+  .field-group input:focus,
+  .field-group textarea:focus,
+  .field-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
+  }
+
+  .btn,
+  .admin-retos-actions button,
+  .admin-modal-buttons .btn {
+    background: #111827;
+    color: #e5e7eb;
+  }
+
+  .btn.primary,
+  .admin-retos-actions .primary {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  .btn.ghost {
+    background: transparent;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+}

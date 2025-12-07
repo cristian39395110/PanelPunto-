@@ -1,0 +1,257 @@
+/* 🎨 CONTENEDOR GENERAL */
+
+.sv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌙 DARK MODE AUTOMÁTICO */
+@media (prefers-color-scheme: dark) {
+  .sv-container {
+    color: #eee !important;
+    background: #1a1a1a !important;
+  }
+
+  .sv-card {
+    background: #2b2b2b !important;
+    border-color: #444 !important;
+  }
+
+  .sv-input,
+  .sv-select {
+    background: #2a2a2a !important;
+    color: #eee !important;
+    border-color: #555 !important;
+  }
+
+  .sv-btn-primary {
+    background: #0079ff !important;
+  }
+
+  .sv-header {
+    border-bottom: 1px solid #444;
+  }
+}
+
+/* 🏷️ HEADER */
+.sv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.sv-subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.sv-logout {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sv-logout:hover {
+  opacity: 0.85;
+}
+
+/* 🎯 FILTROS */
+.sv-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.sv-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sv-field label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sv-select,
+.sv-input {
+  width: 220px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* 📋 FORM DE ALTA */
+.sv-resumen-global {
+  background: #f6f8f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sv-resumen-global {
+    background: #242424 !important;
+  }
+}
+
+.sv-resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.sv-resumen-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sv-resumen-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sv-alta-form select,
+.sv-alta-form input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: white;
+}
+
+.sv-alert-feedback {
+  font-size: 14px;
+  color: #ff5252;
+}
+
+/* ⭐ BOTONES GENERALES */
+.sv-btn {
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.sv-btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.sv-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.sv-btn-alerta {
+  background: #ffb300;
+  color: #222;
+}
+
+.sv-btn-alerta:hover {
+  opacity: 0.85;
+}
+
+/* 🧾 LISTA DE VENDEDORES */
+.sv-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.sv-card {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sv-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sv-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sv-email {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.sv-localidad,
+.sv-alias,
+.sv-doc {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* 🏷️ BADGES */
+.sv-badge {
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.sv-badge-ok {
+  background: #37c73b;
+  color: white;
+}
+
+.sv-badge-pend {
+  background: #ff5252;
+  color: white;
+}
+
+.sv-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 📌 ESTADOS */
+.sv-loading,
+.sv-error,
+.sv-empty {
+  padding: 12px;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .sv-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sv-filters {
+    flex-direction: column;
+  }
+
+  .sv-resumen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-list {
+    grid-template-columns: 1fr;
+  }
+}

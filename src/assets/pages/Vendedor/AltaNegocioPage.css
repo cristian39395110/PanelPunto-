@@ -1,0 +1,147 @@
+/* 📌 CONTENEDOR GENERAL */
+.vend-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  color: #e5e7eb;
+  max-width: 900px; /* centra contenido en pantallas grandes */
+}
+
+
+
+/* 📌 HEADER */
+.vend-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.vend-header h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+
+/* 📌 FORMULARIO */
+.vend-form {
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 14px;
+  padding: 22px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 420px;
+}
+
+
+/* 📌 INPUT */
+.vend-input {
+  width: 93%;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #e5e7eb;
+
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.vend-input::placeholder {
+  color: #94a3b8;
+}
+
+.vend-input:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.4);
+}
+
+
+
+/* 📌 MENSAJES */
+.vend-msg {
+  font-size: 14px;
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.75);
+  border-left: 4px solid #ff7a00;
+  border-radius: 6px;
+  color: #fff;
+}
+
+
+
+/* 📌 BOTÓN PRINCIPAL */
+.vend-btn {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(135deg, #ff7a00, #e66a00);
+  color: #fff;
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 14px 32px rgba(255, 110, 30, 0.45);
+}
+
+.vend-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(255, 110, 30, 0.55);
+}
+
+.vend-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* 📌 BOTÓN SECUNDARIO (VOLVER) */
+.vend-btn-back {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(15, 23, 42, 0.55);
+  color: #cbd5e1;
+
+  transition: all 0.15s ease;
+}
+
+.vend-btn-back:hover {
+  background: rgba(148, 163, 184, 0.20);
+  color: #fff;
+}
+
+
+
+/* 📱 RESPONSIVE */
+@media (min-width: 768px) {
+  .vend-container {
+    padding-top: 40px;
+  }
+}
