@@ -1,91 +1,294 @@
+/* AdminSorteosPage.css */
+
+:root {
+  color-scheme: light dark;
+}
+
+/* =========================
+   CONTENEDOR GENERAL
+   ========================= */
+
 .admin-sorteos {
-  padding: 16px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 16px 12px 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
 }
 
 .admin-sorteos-title {
   font-size: 1.6rem;
-  margin-bottom: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
 }
 
+.admin-sorteos-subtitle {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   SECCIÓN PREMIOS (ARRIBA)
+   ========================= */
+
+.admin-sorteos-premios {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.premios-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.premios-table th,
+.premios-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.premios-table th {
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+}
+
+.premios-table tr:last-child td {
+  border-bottom: none;
+}
+
+.premios-table input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: inherit;
+  outline: none;
+}
+
+.premios-table input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+/* =========================
+   FILTROS
+   ========================= */
+
 .admin-sorteos-filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: flex-end;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
 }
 
 .filtro-group {
   display: flex;
   flex-direction: column;
-  min-width: 160px;
+  gap: 6px;
+  font-size: 0.9rem;
 }
 
 .filtro-group label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.filtro-group select,
+.filtro-group input[type="number"] {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: inherit;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.filtro-group select:focus,
+.filtro-group input[type="number"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+/* Provincias multi-select */
+
+.filtro-provincias-multi {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 8px;
+  max-height: 220px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prov-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.85rem;
+  color: #374151;
+}
+
+.prov-item input[type="checkbox"] {
+  accent-color: #2563eb;
+}
+
+.prov-item-all {
+  font-weight: 600;
+  border-bottom: 1px dashed #d1d5db;
+  padding-bottom: 4px;
   margin-bottom: 4px;
 }
 
-.filtro-group input,
-.filtro-group select {
-  padding: 6px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+.prov-list {
+  overflow-y: auto;
+  padding-right: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 10px;
 }
 
+/* =========================
+   BOTONES ACCIONES
+   ========================= */
+
 .admin-sorteos-actions {
+  grid-column: 1 / -1;
   display: flex;
-  gap: 8px;
-  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
 }
 
 .admin-sorteos-actions button {
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
   border: none;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #2563eb;
+  color: #f9fafb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.admin-sorteos-actions button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+}
+
+.admin-sorteos-actions button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .admin-sorteos-actions button.danger {
-  background: #c62828;
-  color: #fff;
+  background: #dc2626;
 }
+
+.admin-sorteos-actions button.danger:hover:not(:disabled) {
+  background: #b91c1c;
+  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.28);
+}
+
+.admin-sorteos-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* =========================
+   ESTADOS / MENSAJES
+   ========================= */
 
 .admin-sorteos-status {
   margin-top: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
 }
 
 .admin-sorteos-error {
   margin-top: 8px;
-  color: #c62828;
+  font-size: 0.9rem;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
 .admin-sorteos-ok {
   margin-top: 8px;
-  color: #2e7d32;
+  font-size: 0.9rem;
+  color: #166534;
+  background: #dcfce7;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
+/* =========================
+   TABLA DE GANADORES
+   ========================= */
+
 .admin-sorteos-ganadores {
-  margin-top: 20px;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .ganadores-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.ganadores-table thead {
+  background: #f3f4f6;
 }
 
 .ganadores-table th,
 .ganadores-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
 }
 
 .ganadores-table th {
-  background: #f5f5f5;
+  font-weight: 600;
+  color: #374151;
+}
+
+.ganadores-table tr:last-child td {
+  border-bottom: none;
 }
 
 .ganador-user {
@@ -95,8 +298,210 @@
 }
 
 .ganador-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
   object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.ganadores-table input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: inherit;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.ganadores-table input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+  background-color: #ffffff;
+}
+
+.ganadores-table button {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: none;
+  background: #10b981;
+  color: #ecfdf5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.ganadores-table button:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.25);
+}
+
+.ganadores-table button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .admin-sorteos {
+    padding: 12px 8px 24px;
+  }
+
+  .admin-sorteos-filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .filtro-provincias-multi {
+    max-height: 260px;
+  }
+
+  .ganadores-table th,
+  .ganadores-table td {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ganadores-table thead {
+    display: none;
+  }
+
+  .ganadores-table,
+  .ganadores-table tbody,
+  .ganadores-table tr,
+  .ganadores-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .ganadores-table tr {
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 8px 10px;
+  }
+
+  .ganadores-table td {
+    border-bottom: none;
+    padding: 4px 0;
+  }
+
+  .ganadores-table td:last-child {
+    padding-top: 6px;
+  }
+
+  .ganadores-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 2px;
+  }
+}
+
+/* =========================
+   MODO OSCURO (auto)
+   ========================= */
+
+@media (prefers-color-scheme: dark) {
+  .admin-sorteos {
+    background-color: #020617;
+    color: #e5e7eb;
+  }
+
+  .admin-sorteos-title {
+    color: #f9fafb;
+  }
+
+  .admin-sorteos-subtitle {
+    color: #9ca3af;
+  }
+
+  .admin-sorteos-premios,
+  .admin-sorteos-filtros,
+  .admin-sorteos-ganadores {
+    background: #020617;
+    border: 1px solid #1f2937;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+  }
+
+  .premios-table th,
+  .premios-table td,
+  .ganadores-table th,
+  .ganadores-table td {
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .ganadores-table thead {
+    background: #030712;
+  }
+
+  .filtro-provincias-multi {
+    background: #020617;
+    border-color: #1f2937;
+  }
+
+  .filtro-group label {
+    color: #e5e7eb;
+  }
+
+  .filtro-group select,
+  .filtro-group input[type="number"],
+  .premios-table input[type="text"],
+  .ganadores-table input[type="text"] {
+    background-color: #020617;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .filtro-group select:focus,
+  .filtro-group input[type="number"]:focus,
+  .premios-table input[type="text"]:focus,
+  .ganadores-table input[type="text"]:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.5);
+    background-color: #020617;
+  }
+
+  .prov-item {
+    color: #e5e7eb;
+  }
+
+  .admin-sorteos-status {
+    color: #9ca3af;
+  }
+
+  .admin-sorteos-error {
+    background: rgba(127, 29, 29, 0.4);
+    color: #fecaca;
+  }
+
+  .admin-sorteos-ok {
+    background: rgba(21, 128, 61, 0.4);
+    color: #bbf7d0;
+  }
+
+  .ganadores-table tr {
+    background-color: transparent;
+  }
+
+  @media (max-width: 600px) {
+    .ganadores-table tr {
+      background-color: #020617;
+      border-color: #1f2937;
+    }
+    .ganadores-table td::before {
+      color: #9ca3af;
+    }
+  }
 }
