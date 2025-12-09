@@ -16,6 +16,7 @@ import AdminVendedoresPage from "./assets/pages/Administrador/AdminVendedoresPag
 import AdminVendedorDetallePage from "./assets/pages/Administrador/AdminVendedorDetallePage";
 import AdminAlertasPage from "./assets/pages/Administrador/AdminAlertasPage";
 import AdminNegociosPage from "./assets/pages/Administrador/AdminNegociosPage"; // 👈 NUEVO
+import AdminEstadisticasPage from "./assets/pages/Administrador/AdminEstadisticasPage"; 
 
 // Supervisor
 import SupervisorLayout from "./layouts/SupervisorLayout";
@@ -59,6 +60,8 @@ function App() {
             path="vendedor/:vendedorId"
             element={<AdminVendedorDetallePage />}
           />
+          
+           <Route path="usuario" element={<AdminEstadisticasPage />} />
           <Route path="alertas" element={<AdminAlertasPage />} />
           <Route path="negocios" element={<AdminNegociosPage />} /> {/* 👈 NUEVA PAGE */}
         </Route>

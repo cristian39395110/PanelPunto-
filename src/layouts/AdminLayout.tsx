@@ -117,6 +117,15 @@ const AdminLayout: React.FC = () => {
           >
             🎰 Sorteos
           </NavLink>
+
+           <NavLink
+            to="/admin/usuario"
+            className={({ isActive }) =>
+              "admin-nav-link" + (isActive ? " active" : "")
+            }
+          >
+            🎰 Usuarios
+          </NavLink>
         </nav>
       </aside>
 

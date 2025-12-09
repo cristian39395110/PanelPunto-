@@ -1,0 +1,408 @@
+/* Container general */
+.ae-container {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: #f3f4f6;
+  color: #111827;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header */
+.ae-header {
+  margin-bottom: 1.5rem;
+}
+
+.ae-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+.ae-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Grid principal */
+.ae-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .ae-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.7fr);
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+}
+
+/* Card */
+.ae-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.ae-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ae-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ae-card-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Botón refresh */
+.ae-refresh-btn {
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  background: #f9fafb;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #111827;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.ae-refresh-btn:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.08);
+}
+
+.ae-refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Totales */
+.ae-total {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.ae-total-number {
+  font-weight: 700;
+  color: #b91c1c;
+}
+
+/* Tabla genérica */
+.ae-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.ae-table thead {
+  background: #f9fafb;
+}
+
+.ae-table th,
+.ae-table td {
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.ae-th-right,
+.ae-td-right {
+  text-align: right;
+}
+
+.ae-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Filas clickeables */
+.ae-row-selectable {
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.ae-row-selectable:hover {
+  background: #f3f4f6;
+}
+
+.ae-row-selectable--active {
+  background: #fee2e2;
+}
+
+/* Hint */
+.ae-hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Estados */
+.ae-status {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+.ae-status--loading {
+  color: #2563eb;
+}
+
+.ae-status--error {
+  color: #b91c1c;
+}
+
+.ae-status--ok {
+  color: #16a34a;
+}
+
+/* Filtros ranking */
+.ae-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.5rem 0 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 0.75rem;
+}
+
+.ae-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 120px;
+}
+
+.ae-filtro label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.ae-filtro select,
+.ae-filtro input {
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  padding: 0.32rem 0.7rem;
+  font-size: 0.8rem;
+  outline: none;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.ae-filtro select:focus,
+.ae-filtro input:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.3);
+}
+
+/* Botón de filtros */
+.ae-filtro-btn {
+  align-self: flex-end;
+}
+
+.ae-filtro-btn button {
+  border-radius: 9999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  background: #ef4444;
+  color: #f9fafb;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s ease, transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.ae-filtro-btn button:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.25);
+}
+
+.ae-filtro-btn button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Ranking */
+.ae-ranking-wrapper {
+  margin-top: 0.25rem;
+  overflow-x: auto;
+}
+
+.ae-table-ranking th,
+.ae-table-ranking td {
+  white-space: nowrap;
+}
+
+/* Barra mix compras/retos */
+.ae-mix-bar {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 0.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.ae-mix-bar-checkin {
+  height: 100%;
+  background: #ef4444; /* compras */
+}
+
+.ae-mix-bar-retos {
+  height: 100%;
+  background: #22c55e; /* retos */
+}
+
+/* Leyenda */
+.ae-legend {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ae-legend-box {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.ae-legend-checkin {
+  background: #ef4444;
+}
+
+.ae-legend-retos {
+  background: #22c55e;
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  .ae-container {
+    background: #020617;
+    color: #e5e7eb;
+  }
+
+  .ae-title {
+    color: #e5e7eb;
+  }
+
+  .ae-subtitle {
+    color: #9ca3af;
+  }
+
+  .ae-card {
+    background: #0b1120;
+    border-color: #1f2937;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  }
+
+  .ae-card-title {
+    color: #e5e7eb;
+  }
+
+  .ae-card-subtitle {
+    color: #9ca3af;
+  }
+
+  .ae-table thead {
+    background: #020617;
+  }
+
+  .ae-table th,
+  .ae-table td {
+    border-bottom-color: #1f2937;
+  }
+
+  .ae-row-selectable:hover {
+    background: #111827;
+  }
+
+  .ae-row-selectable--active {
+    background: #450a0a;
+  }
+
+  .ae-total {
+    color: #e5e7eb;
+  }
+
+  .ae-total-number {
+    color: #f97316;
+  }
+
+  .ae-status {
+    color: #e5e7eb;
+  }
+
+  .ae-status--loading {
+    color: #60a5fa;
+  }
+
+  .ae-status--error {
+    color: #fecaca;
+  }
+
+  .ae-status--ok {
+    color: #bbf7d0;
+  }
+
+  .ae-filtro select,
+  .ae-filtro input {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #374151;
+  }
+
+  .ae-refresh-btn {
+    background: #020617;
+    border-color: #374151;
+    color: #e5e7eb;
+  }
+
+  .ae-refresh-btn:hover {
+    background: #111827;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.9);
+  }
+
+  .ae-mix-bar {
+    background: #111827;
+  }
+
+  .ae-hint,
+  .ae-legend {
+    color: #9ca3af;
+  }
+}
